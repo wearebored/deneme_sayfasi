@@ -43,6 +43,8 @@
 }
 #div3{
     display: flex;
+    position: relative;
+    bottom: 6px;
 
 }
 #div4 a{
@@ -144,6 +146,9 @@ p{
     margin: 10px;
     color: rgba(0, 0, 0, 0.897);
 
+}
+#div5 p a{
+    color: #000080
 }
 #div8{
     
