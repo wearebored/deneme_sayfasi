@@ -26,6 +26,7 @@ body{
 header{
     display: flex;
     align-items: center;
+    width: 48vw
 }
 #header1{
     display: flex;
@@ -53,12 +54,14 @@ header{
 #header3 p{
     font-size: 26px;
     margin-top: 4vh;
+    width: 900px;
 }
 
 #header4{
     margin-top: 7vh;
     display: flex;
-    
+    justify-content: center;
+    width: 900px;
 }
 
 
@@ -370,8 +373,24 @@ footer{
     margin-right: 1.8vw;
     
 }
-#footer3 ul li a img{
+#footer3 ul li a svg{
     width: 30px;
+    
+}
+
+#svg1 path:hover{
+    mix-blend-mode: multiply;
+    fill: hsl(171, 66%, 44%);
+    
+}
+#svg2 path:hover{
+    mix-blend-mode: multiply;
+    fill: hsl(171, 66%, 44%);
+    
+}
+#svg3 path:hover{
+    mix-blend-mode: multiply;
+    fill: hsl(171, 66%, 44%);
     
 }
 
