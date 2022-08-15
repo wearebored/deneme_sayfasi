@@ -11,6 +11,7 @@
 }
 p, a{
     font-weight: 400;
+    cursor: pointer;
 }
 
 body{
@@ -61,17 +62,26 @@ header{
 }
 
 
-#header4 a{
-    background-color: hsla(171, 66%, 44%, 0.726);
+#h41a{
+    background-color: hsl(171, 66%, 44%);
     display: block;
     padding: 20px 46px 16px;
     margin: 0 10px;
     border-radius: 50px;
     font-size: 26px;
     color: white;
-    border-bottom: solid 4px hsla(171, 66%, 44%, 0.836);
+    border-bottom: solid 4px hsla(171, 67%, 24%, 0.836);
     
-
+}
+#h42a{
+    background-color: hsl(233, 100%, 69%);
+    display: block;
+    padding: 20px 46px 16px;
+    margin: 0 10px;
+    border-radius: 50px;
+    font-size: 26px;
+    color: white;
+    border-bottom: solid 4px hsl(233, 45%, 37%);
 }
 main{
     display: flex;
@@ -255,33 +265,40 @@ main{
     justify-content: center;
 
 }
-#main8_1 a{
-    background-color: hsla(171, 66%, 44%, 0.726);
+#m811a{
+    background-color:hsl(171, 66%, 44%);
     display: block;
     padding: 20px 46px 16px;
     margin: 0 10px;
     border-radius: 50px;
     font-size: 26px;
     color: white;
-    border-bottom: solid 4px hsla(171, 66%, 44%, 0.836);
+    border-bottom: solid 4px hsla(171, 65%, 25%, 0.836);
+
+}
+#m812a{
+    background-color: hsl(233, 100%, 69%);
+    display: block;
+    padding: 20px 46px 16px;
+    margin: 0 10px;
+    border-radius: 50px;
+    font-size: 26px;
+    color: white;
+    border-bottom: solid 4px hsl(233, 45%, 35%);
 
 }
 
 
-
-
-
 footer{
-    background-color: rebeccapurple;
     margin-top: 21.5vh;
     width: 100%;
     display: flex;
     position: relative;
-    height: 100vh;
+    background-color: hsla(212, 10%, 33%, 0.096);
+    height: 20vh;
 }
 #footer1{
     width: 150px;
-    
     position: absolute;
     top: 0;
     left: 11.15vw;
@@ -293,27 +310,54 @@ footer{
 
 }
 #footer2{
-    width: 700px;
-    background-color: rgb(77, 0, 128);
+    width: 760px;
     position: absolute;
-    top: 0;
-    left: 24vw;
-}
-#footer2 ul li{
-    display: block;
-    margin: 10px 12vh 0 0;
+    top: 5vh;
+    left: 24.3vw;
 }
 #footer2 ul{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
+#footer2 ul li{
+    
+    width: 160px;
+    display: block;
+    margin-right: 4.8vw;
+    margin-bottom: 2vh;
+    font-size: 24px;
+}
+#footer2 ul li a{
+    
+    color: hsl(210, 10%, 33%);
+}
+#footer2 ul li a:hover{
+    color: hsl(171, 66%, 44%);
+}
+
+
+
+
 
 #footer3{
     width: 300px;
-    background-color: rgb(128, 58, 0);
     position: absolute;
-    top: 0;
-    right: 10vw;
+    top: 8.4vh;
+    right: 3.8vw;
 }
+#footer3 ul{
+    display: flex;
+    
+}
+#footer3 ul li{
+    display: block;
+    margin-right: 1.8vw;
+    
+}
+#footer3 ul li a img{
+    width: 30px;
+    
+}
+
 
