@@ -15,7 +15,7 @@ p, a{
 }
 
 body{
-    background-image: url(/bg-header-desktop.png);
+    background-image: url(bg-header-desktop.png);
     background-size: contain;
     background-repeat: no-repeat;
     display: flex;
