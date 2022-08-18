@@ -150,6 +150,11 @@ footer > img{
     color: rgba(0, 0, 0, 0.479);
     font-weight: 700;
 }
+#span1 font{
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 40px;
+}
 
 @media (max-width:375px) {
     *{
@@ -288,6 +293,11 @@ footer > img{
         color: rgba(0, 0, 0, 0.438);
         font-weight: 700;
         
+    }
+    #span1 font{
+        color: rgb(0, 0, 0);
+        font-weight: 700;
+        font-size: 40px;
     }
 
 }
