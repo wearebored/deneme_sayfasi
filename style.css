@@ -1,12 +1,12 @@
-.div2_1{
+/* .div2_1{
     width: 100px;
     height: 80px;
     background-color: white;
     
-    /* content: '';
+    content: '';
 	position: absolute;
 	bottom: 0;
-	left: 50%; */
+	left: 50%;
 	
 	border: 20px solid;
 	border-top-color: #00aabb;
@@ -23,4 +23,77 @@
     background-color: red;
     border-radius: 20px;
     
+}  */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
 }
+main{
+    position: absolute;
+    bottom: 38vh;
+    height: 24vh;
+    width:64vw;
+    z-index: 2;
+    margin: 0 18vw;
+    display: flex;
+    justify-content: space-between;
+
+}
+footer{
+    height: 51vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+}   
+footer > img{
+    height: 100%;
+    width: 100%;
+}
+.div1{
+    background-color: blue;
+    width: 38.5%;
+    border-radius: 10px 100px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.div2{
+    background-color: brown;
+    width: 58.5%;
+    border-radius: 10px;
+    margin-top: 6vh;
+}
+.div1_1{
+    margin-left: 43px;
+    
+}
+.div1_2{
+    margin-left: 43px;
+    display: flex;
+    align-items: flex-end;
+}
+.div1_2 div{
+
+    margin: 28px 20px 0 0;
+    width: 45px;
+    height: 45px;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.div1_2 img{
+    
+    
+    
+    
+}
+
+
