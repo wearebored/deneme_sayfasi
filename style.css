@@ -2,10 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
-    
+
 }
 body{
     background-color: hsl(229, 57%, 11%);
@@ -135,9 +134,20 @@ footer > img{
     justify-content: center;
     align-items: center;
 }
+.div2_2 p{
+    color: white;
+}
+.div2_4 p{
+    color: white;
+}
 
-.div2_1 p, span{
-    color: black;
+#span1{
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 40px;
+}
+#p1{
+    color: rgba(0, 0, 0, 0.479);
     font-weight: 700;
 }
 
@@ -150,6 +160,7 @@ footer > img{
     body{
         background-image: url(images/bg-mobile.png);
         background-repeat: no-repeat;
+        
     }
     footer{
         display: none;
@@ -268,10 +279,15 @@ footer > img{
         align-items: center;
     }
     
-    .div2_1 p, span{
-        color: black;
+    #span1{
+        color: rgb(0, 0, 0);
         font-weight: 700;
+        font-size: 40px;
     }
-
+    #p1{
+        color: rgba(0, 0, 0, 0.438);
+        font-weight: 700;
+        
+    }
 
 }
