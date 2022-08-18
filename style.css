@@ -1,36 +1,13 @@
-/* .div2_1{
-    width: 100px;
-    height: 80px;
-    background-color: white;
-    
-    content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	
-	border: 20px solid;
-	border-top-color: #00aabb;
-    border-right-color: red;
-	border-top: 0;
-    border-left: 0;
-    border-bottom-color: white;
-    border-radius: 20px 20px 0 20px;
-   
-}
-.div2_1 div{
-    width: 120px;
-    height: 80px;
-    background-color: red;
-    border-radius: 20px;
-    
-}  */
-
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+body{
+    background-color: hsl(229, 57%, 11%);
 }
 main{
     position: absolute;
@@ -41,6 +18,7 @@ main{
     margin: 0 18vw;
     display: flex;
     justify-content: space-between;
+    
 
 }
 footer{
@@ -55,7 +33,7 @@ footer > img{
     width: 100%;
 }
 .div1{
-    background-color: blue;
+    background-color: hsl(228, 56%, 26%);
     width: 38.5%;
     border-radius: 10px 100px 10px 10px;
     display: flex;
@@ -63,10 +41,14 @@ footer > img{
     justify-content: center;
 }
 .div2{
-    background-color: brown;
+    background-color: hsl(228, 56%, 26%);
     width: 58.5%;
     border-radius: 10px;
     margin-top: 6vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
 }
 .div1_1{
     margin-left: 43px;
@@ -82,18 +64,79 @@ footer > img{
     margin: 28px 20px 0 0;
     width: 45px;
     height: 45px;
-    background-color: aqua;
+    background-color: hsl(229, 57%, 11%);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
 }
 
-.div1_2 img{
+.div2 > div{
+    
+    margin: 0 2vw;
     
     
-    
-    
+
+}
+.div2_3{
+    height: 18px;
+    margin: 0 2%;
+    width: 96%;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.div2_4{
+    display: flex;
+    justify-content: space-between;
+}
+.div2_3_1{
+    height: 16px;
+    width: 74%;
+    margin-left: 1px;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.div2_3_1_1{
+    height: 11px;
+    width: 11px;
+    margin-right: 2px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+.div2_2, .div2_3, .div2_4{
+    margin: 10px;
 }
 
+.div2_1{
+    position: absolute;
+    right: 2.8vw;
+    top: -6.2vh;
+    
+    width: 180px;
+    height: 96px;
+    
+    border-top-right-radius: 50px;
+    border-right: 20px solid rgb(255, 255, 255) ;
+    border-bottom: 20px solid transparent;
+
+}
+.div2_1 div{
+    width: 180px;
+    height: 78px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div2_1 p, span{
+    color: black;
+    font-weight: 700;
+}
 
