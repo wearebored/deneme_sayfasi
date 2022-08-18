@@ -1,0 +1,26 @@
+.div2_1{
+    width: 100px;
+    height: 80px;
+    background-color: white;
+    
+    /* content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%; */
+	
+	border: 20px solid;
+	border-top-color: #00aabb;
+    border-right-color: red;
+	border-top: 0;
+    border-left: 0;
+    border-bottom-color: white;
+    border-radius: 20px 20px 0 20px;
+   
+}
+.div2_1 div{
+    width: 120px;
+    height: 80px;
+    background-color: red;
+    border-radius: 20px;
+    
+}
