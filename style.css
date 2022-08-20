@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-attachment: fixed;
+  color: rgba(0, 0, 0, 0.548);
+  font-family: "Lato", sans-serif;
+}
+
+.div1 {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-image: url(img/bg.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div1 h1 {
+  background-color: rgb(71, 65, 65);
+  display: block;
+  color: white;
+  font-size: 50px;
+  letter-spacing: 8px;
+  padding: 28px 27px;
+  outline-offset: 15px;
+  outline: 10px inset purple;
+  border-radius: 30px 0;
+  font-weight: 500;
+}
+
+.div2 {
+  width: 100vw;
+  height: 120vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(img/bg2.jpg);
+  position: relative;
+}
+
+.div2_1 {
+  background-color: antiquewhite;
+}
+.div2_1 h2 {
+  font-weight: 700;
+  text-align: center;
+  padding-top: 7vh;
+  color: rgba(0, 0, 0, 0.548);
+}
+.div2_1 p {
+  font-size: 17px;
+  text-align: center;
+  padding: 3vh 5vh 6vh 5vh;
+  line-height: 30px;
+}
+.div2 img {
+  position: absolute;
+  top: 77vh;
+  left: 35vw;
+  height: 7.5vh;
+}
+
+.div3 {
+  position: relative;
+  width: 100vw;
+  height: 111vh;
+  background-size: cover;
+  background-image: url(img/bg3.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.div3_1 {
+  background-color: antiquewhite;
+}
+.div3_1 h3 {
+  text-align: center;
+  padding-top: 7vh;
+  color: rgba(0, 0, 0, 0.548);
+}
+.div3_1 p {
+  font-size: 15px;
+  text-align: center;
+  padding: 3vh 5.9vh 6vh 5.9vh;
+  line-height: 30px;
+}
+.way {
+  position: absolute;
+  top: 69vh;
+  width: 720px;
+}
+.way p {
+  font-weight: 400;
+  font-size: 50px;
+  letter-spacing: 5px;
+  background-color: rgb(46, 42, 42);
+  display: block;
+  color: white;
+  font-size: 50px;
+  padding: 6px 15px;
+  outline-offset: 3px;
+  outline: 7px inset purple;
+  border-radius: 20px 0;
+  font-weight: 500;
+}
+
+.div4 {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-image: url(img/bg4.jpg);
+}
+/* .div5 {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-image: url(img/bg4.jpg);
+} */
+
+.div {
+}
+.div {
+}
+.div {
+}
+.div {
+}
+.div {
+}
