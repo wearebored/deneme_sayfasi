@@ -118,6 +118,25 @@
   background-size: cover;
   background-image: url(img/bg4.jpg);
 }
+.div4_1 {
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+}
+.div4_1 h4 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding-top: 7vh;
+}
+.div4_1 p {
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+  text-align: center;
+  padding: 3vh 5.9vh 6vh 5.9vh;
+  line-height: 30px;
+}
+.div4_1 strong {
+  color: rgb(0, 0, 0);
+}
 /* .div5 {
   width: 100vw;
   height: 100vh;
