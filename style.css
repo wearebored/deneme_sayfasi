@@ -3,8 +3,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
+  background-attachment: fixed;
 }
-.div1 {
+/* .div1 {
   background-image: url(./img/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,4 +28,70 @@
   font-size: 50px;
   font-weight: 400;
   letter-spacing: 8px;
+}
+.div2 {
+  background-image: url(./img/bg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.div22 {
+  background-color: antiquewhite;
+}
+.div2_1 {
+  background-color: red;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 70px;
+}
+.div2_1 h2 {
+  font-weight: 900;
+}
+.div2_1 p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 17px;
+  line-height: 25px;
+}
+.div2_2 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.div2_2 img {
+  height: 120px;
+} */
+
+.div3 {
+  background-image: url(./img/bg3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.div33 {
+  background-color: antiquewhite;
+}
+.div3_1 {
+  background-color: red;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 70px;
+}
+.div3_1 h3 {
+  font-size: 25px;
+  font-weight: 900;
 }
