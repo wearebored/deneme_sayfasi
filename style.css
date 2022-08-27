@@ -304,6 +304,8 @@ h2 {
   transform: rotate(90deg);
 }
 
+/* mobil versiyon */
+
 @media (max-width: 576px) {
   .header1 {
     width: 100%;
