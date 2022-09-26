@@ -1,24 +1,19 @@
-
-
-
-  fetch("https://restcountries.com/v3.1/all")
-    .then((res) => res.json())
-    .then((res) => {
-      for (i in res) {
-        document.querySelector(
-          "#select"
-        ).innerHTML += `<option class="select" selected>${res[i].name.common}</option>`;
-      }
-      val.disabled=false
-    });
-
-
+fetch("https://restcountries.com/v3.1/all")
+  .then((res) => res.json())
+  .then((res) => {
+    for (i in res) {
+      document.querySelector(
+        "#select"
+      ).innerHTML += `<option class="select" selected>${res[i].name.common}</option>`;
+    }
+    val.disabled = false;
+  });
 
 let val = document.querySelector("#select");
 let sayac = 0;
-val.disabled=true
+val.disabled = true;
 
-val.onchange=()=>{
+val.onchange = () => {
   let sehir = val.value;
   let url = `https://restcountries.com/v3.1/name/${sehir}`;
 
@@ -44,7 +39,7 @@ val.onchange=()=>{
       countryDiv.children[2].innerHTML = countryDiv.children[1].innerHTML;
       countryDiv.children[1].innerHTML = countryDiv.children[0].innerHTML;
       countryDiv.children[0].innerHTML = `
-            <div class="card mx-auto m-3 shadow-lg" style="width: 18rem;">
+            <div class="card mx-auto m-3 shadow-lg" style="width: 18rem; ">
             <img src="${svg}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${common}</h5>
@@ -75,5 +70,4 @@ val.onchange=()=>{
 
         `;
     });
-}
-
+};
