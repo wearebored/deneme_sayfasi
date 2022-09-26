@@ -1,192 +1,82 @@
-let hesap = document.querySelector(".btns");
-let alt = document.querySelector(".alt");
-let ust = document.querySelector(".ust");
-let del = document.querySelector(".del");
 
-hesap.onclick = function (e) {
-  // ------İŞLEM BÖLÜMÜNDE 4 İŞLEM KONTROLÜ YAPARLAR------
-  let bölme = alt.textContent.indexOf("÷");
-  let cikarma = alt.textContent.indexOf("-");
-  let carpma = alt.textContent.indexOf("x");
-  let toplama = alt.textContent.indexOf("+");
-// -------TIKLANILAN ALANIN KARAKTER BİLGİSİ-------
-  let tik = e.path[0].childNodes[0].data;
-  // -----ALT VE ÜST SON KARAKTER------
-  let il = alt.textContent.slice(-1);
-  let us = ust.textContent.slice(-1);
-  // ---------NUMARALARA TIKLAMA---------
-  if (tik in [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) {
-    document.createElement("p");
-    let sayı = document.createTextNode(tik);
-    alt.appendChild(sayı);
-  } 
-  // -----------İŞLEMLERE TIKLAMA--------
-  else if (tik == "÷" || tik == "-" || tik == "x" || tik == "+") {
-    // ------ALT VE ÜST ALAN BOŞKEN SADECE "-" İŞLEMİNİN KULLANIMI--------
-    if (il == "" && us == "") {
-      if (tik == "-") {
-        alt.textContent = ust.textContent;
-        ust.textContent = "";
-        alt.textContent += tik;
-      }
-    } 
-    // ------ÜSTTEKİ SONUÇ ÜZERİNDE İŞLEM YAPMAYA DEVAM ETME-----
-    // ---ALT ALAN BOŞSA ÜSTTEKİ SAYI DEĞERİ 4 İŞLEM KARAKTERLERİ KULLANILARAK İŞLEME DEVAM ETTRİLİR------
-    else if (il == "") {
-      alt.textContent = ust.textContent;
-      ust.textContent = "";
-      alt.textContent += tik;
-    }
-    // -----İŞLEM ALANININ SON KARAKTERİ SAYI İSE----
-    else if (il in [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) {
-      // ------2. BİR 4 İŞLEM KARAKTERİ KULLANILIRSA OTOMATİK EŞİTLEME YAPAR VE KALDIĞI YERDEN DEVAM EDER-----
-      // -----ÖRNEK: "4+5+" YAZILDIĞI ANDA "9+" ŞEKLİNDE DEĞİŞTİRİR------
-      if (bölme >= 1 || cikarma >= 1 || carpma >= 1 || toplama >= 1) {
-        islem();
-        alt.textContent = ust.textContent;
-        ust.textContent = "";
-        alt.textContent += tik;
-      } 
-      // ----4 İŞLEM İLK DEFA KULLANILIYORSA KULLANILAN 4 İŞLEM KARAKTERİNİ YAZDIRI-----
-      else {
-        document.createElement("p");
-        let sayı = document.createTextNode(tik);
-        alt.appendChild(sayı);
-      }
-    }
-    // -------KULLANILAN İŞLEMİN DEĞİŞTİRİLMESİ--------
-    else {
-      console.log(alt.textContent.length);
-      if (alt.textContent.length > 1) {
-        let al = alt.textContent.slice(0, -1).concat(tik);
-        alt.textContent = al;
-      }
-    }
-  } 
-  // -------EŞİTTİR KULLANMA-----
-  else if (tik == "=") {
-    document.createElement("p");
-    let sayı = document.createTextNode("");
-    ust.appendChild(sayı);
-    islem();
-  } 
 
-  // -------SIFIRLAMA İŞLEMİ-------
-  else if (tik == "AC") {
-    ust.textContent = "";
-    alt.textContent = "";
-  } 
-  // -------SAYIYI NEGATİF-POZİTİF YAPMA-------
-  else if (tik == "±") {
-    if (alt.textContent == "") {
-      ust.textContent = -ust.textContent;
-      alt.textContent = ust.textContent;
-      ust.textContent = "";
-    } else {
-      alt.textContent = -alt.textContent;
-    }
-  } 
 
-  // -------YÜZDE KULLANMA-------
-  else if (tik == "%") {
-    if (alt.textContent == "" && !ust.textContent == "") {
-      alt.textContent = (ust.textContent / 100).toFixed(2);
-      ust.textContent = "";
-    } else if (!alt.textContent == "" && !ust.textContent == "") {
-      alt.textContent = (alt.textContent / 100).toFixed(2);
-    } else if (!alt.textContent == "" && ust.textContent == "") {
-      alt.textContent = (alt.textContent / 100).toFixed(2);
-    }
-  }
-
-  // -----NOKTA KOYMA------
-  else if (tik == ".") {
-    let noktaal = alt.textContent.indexOf(".");
-    let noktaus = ust.textContent.indexOf(".");
-    // -----İŞLEM ALANINDA NOKTA KOYMAYA UYGUNLU KONTROLÜ------
-    if (il in [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) {
-      // ------4 KARAKTERİNDEN SONRAKİ SAYIDA "." KULLANILMIŞMI DİYE KONTROL EDER------
-      if (bölme >= 1 || cikarma >= 1 || carpma >= 1 || toplama >= 1) {
-        sayac = 0;
-        for (i of [toplama, carpma, cikarma, bölme]) {
-          if (i > sayac) {
-            sayac = i;
-          }
-        }
-        let a = alt.textContent.slice(sayac + 1);
-       
-        if (a.indexOf(".") < 0) {
-          alt.textContent += tik;
-        }
-      } 
-
-      else if (noktaal == "-1") {
-        alt.textContent += tik;
+  fetch("https://restcountries.com/v3.1/all")
+    .then((res) => res.json())
+    .then((res) => {
+      for (i in res) {
+        document.querySelector(
+          "#select"
+        ).innerHTML += `<option class="select" selected>${res[i].name.common}</option>`;
       }
-      // ------SONUÇA NOKTA KOYMA-------
-    } else if (us in [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) {
-      if (noktaus == "-1") {
-        ust.textContent += tik;
-        alt.textContent = ust.textContent;
-        ust.textContent = "";
-      }
-    }
+      val.disabled=false
+    });
+
+
+
+let val = document.querySelector("#select");
+let sayac = 0;
+val.disabled=true
+val.onclick = () => {
+  sayac += 1;
+  console.log(sayac);
+  if (sayac == "2") {
+    sayac = 0;
+    let sehir = val.value;
+    let url = `https://restcountries.com/v3.1/name/${sehir}`;
+    console.log(url);
+    fetch(url)
+      .then((res) => res.json())
+      .then((res) => {
+        const countryDiv = document.querySelector(".div1");
+        console.log(res[0]);
+        let {
+          capital,
+          currencies,
+          flags: { svg },
+          languages,
+          name: { common },
+          region,
+        } = res[0];
+
+        console.log(Object.values(languages));
+        console.log(Object.values(currencies)[0].name);
+        console.log(Object.values(currencies)[0].symbol);
+        console.log(countryDiv.children);
+        countryDiv.children[2].innerHTML = countryDiv.children[1].innerHTML;
+        countryDiv.children[1].innerHTML = countryDiv.children[0].innerHTML;
+        countryDiv.children[0].innerHTML = `
+            <div class="card mx-auto m-3 shadow-lg" style="width: 18rem;">
+            <img src="${svg}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">${common}</h5>
+                <p class="card-text">${region}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                <i class="fas fa-lg fa-landmark"></i> ${capital}
+                </li>
+                <li class="list-group-item">
+                <i class="fas fa-lg fa-comments"></i> ${Object.values(
+                  languages
+                )}
+                </li>
+                <li class="list-group-item">
+                <i class="fas fa-lg fa-money-bill-wave"></i>
+                ${Object.values(currencies).map(
+                  (item) => Object.values(item) + " "
+                )}
+            </li>
+            </ul>
+            <div class="card-body">
+                
+            
+            </div>
+            </div>
+
+
+        `;
+      });
   }
 };
-
-// ---------HESAPLAMA FONKSİYONU---------
-function islem() {
-  let bölme = alt.textContent.indexOf("÷");
-  let cikarma = alt.textContent.indexOf("-");
-  let carpma = alt.textContent.indexOf("x");
-  let toplama = alt.textContent.indexOf("+");
-  
-  // ---------BÖLME İŞLEMİ-------
-  if (bölme > 0) {
-    let sonuc =
-      Number(alt.textContent.slice(0, bölme)) /
-      Number(alt.textContent.slice(bölme + 1));
-    ust.textContent = sonuc.toFixed(2);
-    alt.textContent = "";
-    console.log(sonuc);
-  } 
-  // ---------ÇARPMA İŞLEMİ---------
-  else if (carpma > 0) {
-    let sonuc =
-      Number(alt.textContent.slice(0, carpma)) *
-      Number(alt.textContent.slice(carpma + 1));
-    ust.textContent = sonuc;
-    alt.textContent = "";
-    console.log(sonuc);
-  } 
-  // ----------TOPLAMA İŞLEMİ--------
-  else if (toplama > 0) {
-    let sonuc =
-      Number(alt.textContent.slice(0, toplama)) +
-      Number(alt.textContent.slice(toplama + 1));
-    ust.textContent = sonuc;
-    alt.textContent = "";
-    console.log(sonuc);
-  } 
-  // ----------ÇIKARMA İŞLEMİ---------
-  else if (cikarma >= 0) {
-    if (cikarma == "0") {
-      let ifade = alt.textContent.slice(1);
-      let cikarma2 = ifade.indexOf("-");
-      let sonuc =
-        (Number(ifade.slice(0, cikarma2)) + Number(ifade.slice(cikarma2 + 1))) *
-        -1;
-      ust.textContent = sonuc;
-      alt.textContent = "";
-      console.log(sonuc);
-    } else {
-      let sonuc =
-        Number(alt.textContent.slice(0, cikarma)) -
-        Number(alt.textContent.slice(cikarma + 1));
-      ust.textContent = sonuc;
-      alt.textContent = "";
-      console.log(sonuc);
-    }
-  }
-}
 
