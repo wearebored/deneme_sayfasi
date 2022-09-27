@@ -13,7 +13,7 @@
 //   .then((response) => response.json())
 //   .then((response) => console.log(response))
 //   .catch((err) => console.error(err));
-let button = document.querySelector(".konum");
+let button = document.querySelector(".konum button");
 
 
 button.onclick = function () {
@@ -121,7 +121,7 @@ button.onclick = function () {
 
 
 
-document.querySelector(".buton").onclick = () => {
+document.querySelector(".buton button").onclick = () => {
   let inp = document.querySelector("#sehir").value;
   fetch(
     `https://api.openweathermap.org/data/2.5/forecast?q=${inp}&appid=392b2f60556f3f3ff66b102138100d46`
