@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(pea.jpg);
+
+  background-size: cover;
+}
+h1 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin: 2rem;
+  font-size: 3rem;
+}
+.arama {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.arama input {
+  padding: 1.4rem;
+  margin: 0 12rem;
+  font-size: 1.2rem;
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.712);
+
+  border: solid 3px rgb(255, 255, 255);
+  text-align: center;
+  color: white;
+}
+.arama_but {
+  display: flex;
+}
+
+.buton {
+  width: 50%;
+  display: flex;
+      align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+}
+/* .buton button {
+  padding: 1.4rem 0;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  margin: 2rem 1rem 0 5rem;
+  background-color: rgba(255, 255, 255, 0.644);
+
+  border: solid 3px rgb(0, 0, 0);
+} */
+.buton button {
+      width: 70%;
+  padding: 1.4rem 0;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  margin: 2rem 1rem 0 5rem;
+  background-color: rgba(255, 255, 255, 0.644);
+
+  border: solid 3px rgb(0, 0, 0);
+}
+.konum {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* .konum button {
+  padding: 1.4rem 0;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  margin: 2rem 5rem 0 1rem;
+  background-color: rgba(255, 255, 255, 0.644);
+
+  border: solid 3px rgb(0, 0, 0);
+} */
+.konum button {
+     width: 70%;
+  padding: 1.4rem 0;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  margin: 2rem 5rem 0 1rem;
+  background-color: rgba(255, 255, 255, 0.644);
+
+  border: solid 3px rgb(0, 0, 0);
+}
+.sonuc {
+  grid-column: 1/7;
+  /* background-color: rgb(255, 0, 21); */
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 40px 5rem;
+  background-color: rgba(182, 180, 180, 0.671);
+  border-radius: 2rem;
+}
+/* .sonuc2 {
+  grid-area: 3/1/4/7;
+  background-color: rgb(17, 32, 32);
+}
+.sonuc3 {
+  grid-area: 4/1/5/7;
+  background-color: rgb(0, 255, 42);
+} */
+.günler {
+  width: 30%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-around;
+  flex-wrap: wrap;
+  border-radius: 2rem;
+}
+
+.derece {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.sıcaklık {
+  font-size: 4rem;
+}
+.c {
+  font-size: 1.5rem;
+}
+.durum {
+  font-size: 1.5rem;
+}
+.tarih {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.sehir {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  height: 1rem;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+}
+.a {
+  grid-column: 1/7;
+}
+
+@media (max-width: 540px) {
+  .sonuc {
+    margin: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .günler {
+    width: 100%;
+    border: solid 2px rgba(255, 255, 255, 0.596);
+  }
+  body {
+  
+
+  background-position: center;
+  background-repeat: repeat;
+  background-image: url(pea.jpg);
+
+  background-size: cover;
+}
+  .arama input {
+ 
+  margin: 0 1rem;
+  
+  }
+  .konum button {
+    width: 10rem;
+  
+  margin: 2rem 5rem 0 0.5rem;
+ 
+}
+ .buton button {
+  width: 10rem;
+  
+  margin: 2rem 0.5rem 0 5rem;
+  
+} 
+
+}
