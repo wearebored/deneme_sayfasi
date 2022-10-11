@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "//wearebored.github.io/deneme_sayfasi/static/css/main.fb06d8fe.css",
-    "main.js": "//wearebored.github.io/deneme_sayfasi/static/js/main.187b8424.js",
-    "index.html": "//wearebored.github.io/deneme_sayfasi/index.html",
-    "main.fb06d8fe.css.map": "//wearebored.github.io/deneme_sayfasi/static/css/main.fb06d8fe.css.map",
-    "main.187b8424.js.map": "//wearebored.github.io/deneme_sayfasi/static/js/main.187b8424.js.map"
+    "main.css": "/deneme_sayfasi/static/css/main.001bf59c.css",
+    "main.js": "/deneme_sayfasi/static/js/main.187b8424.js",
+    "index.html": "/deneme_sayfasi/index.html",
+    "main.001bf59c.css.map": "/deneme_sayfasi/static/css/main.001bf59c.css.map",
+    "main.187b8424.js.map": "/deneme_sayfasi/static/js/main.187b8424.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb06d8fe.css",
+    "static/css/main.001bf59c.css",
     "static/js/main.187b8424.js"
   ]
 }
