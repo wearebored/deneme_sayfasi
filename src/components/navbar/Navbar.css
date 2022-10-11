@@ -1,0 +1,26 @@
+nav {
+  background-color: black;
+
+}
+a{
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+}
+nav li {
+  font-size: 2rem;
+  /* padding: 1rem; */
+  /* margin: 1rem; */
+}
+li div{
+    padding: 1rem;
+}
+li:hover{
+    background-color: aqua;
+}
