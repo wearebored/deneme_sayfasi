@@ -7,14 +7,14 @@
 .resim img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-position: center;
   border-radius: 5px;
 }
 .resim {
+  width: 95%;
+  height: 95%;
+  margin: auto;
   overflow: hidden;
-  height: 35vh;
-  margin: 1rem;
-  padding-bottom: 1rem;
 }
 
 .baslik {
@@ -27,6 +27,7 @@
   background-color: rgba(0, 0, 0, 0.651);
   color: white;
   padding: 2rem 1rem;
+  transform: translateY(1rem);
 }
 
 .resim:hover {
@@ -40,7 +41,8 @@
 }
 .düzen {
   overflow: hidden;
-  height: 21.6rem;
+  width: 500px;
+  height: 19rem;
   position: relative;
 }
 .bilgi p {
